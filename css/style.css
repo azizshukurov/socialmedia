@@ -67,7 +67,7 @@ header section .header-mode span {
 header section .header-mode .mode-dark {
   width: 48px;
   height: 24px;
-  background: linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%);
+  background: linear-gradient(225deg, #40db82 0%, #388fe7 98.02%);
   border-radius: 12px;
   cursor: pointer;
   position: relative;
@@ -89,12 +89,8 @@ main {
           transform: translateY(-140px);
 }
 main section .main__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
@@ -102,21 +98,23 @@ main section .main__row {
 main section .main__row .main__col {
   background: #252b42;
   border-radius: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 main section .main__row .main__col i {
   font-size: 20px;
 }
 main section .main__row .main__col .facebook {
-  color: #178FF5;
+  color: #178ff5;
 }
 main section .main__row .main__col .twitter {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 main section .main__row .main__col .instagram {
-  color: linear-gradient(225deg, #DF4896 0%, #EE877E 50.91%, #FDC366 100%);
+  color: linear-gradient(225deg, #df4896 0%, #ee877e 50.91%, #fdc366 100%);
 }
 main section .main__row .main__col .youtube {
-  color: #C4032B;
+  color: #c4032b;
 }
 main section .main__row .main__col .caret {
   color: #1eb589;
@@ -145,13 +143,28 @@ main section .main__row .main__col .up {
   color: #1eb589;
 }
 main section .main__row .main__col .down {
-  color: #DC414C;
+  color: #dc414c;
+}
+main section .main__row .main__col:hover {
+  background: #333A55;
+}
+main section .main__row .main-fc {
+  border-top: 4px solid #178FF5;
+}
+main section .main__row .main-tw {
+  border-top: 4px solid #1DA1F2;
+}
+main section .main__row .main-ins {
+  border-top: 4px solid #DF4896;
+}
+main section .main__row .main-yt {
+  border-top: 4px solid #C4032B;
 }
 main section .main-info {
   margin-bottom: 64px;
 }
 main section .main-info .main__col {
-  padding: 32px 63px 24px 63px;
+  padding: 32px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,7 +192,7 @@ main section .main-info .main__col .username {
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 main section .main-info .main__col .username span {
   font-weight: 700;
@@ -216,12 +229,8 @@ main section .main-overview h4 {
   color: #ffffff;
 }
 main section .main-overview .main__row_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
@@ -243,13 +252,13 @@ main section .main-overview .main__row_box .main__col {
 main section .main-overview .main__row_box .main__col .page p {
   font-weight: 700;
   font-size: 14px;
-  color: #8C98C6;
+  color: #8c98c6;
   margin-bottom: 23px;
 }
 main section .main-overview .main__row_box .main__col .page h5 {
   font-weight: 700;
   font-size: 32px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 main section .main-overview .main__row_box .main__col .growth {
   display: -webkit-box;
