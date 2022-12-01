@@ -237,7 +237,6 @@ main section .main-overview .main__row_box {
 }
 main section .main-overview .main__row_box .main__col {
   padding: 0px 24px;
-  width: 255px;
   height: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
