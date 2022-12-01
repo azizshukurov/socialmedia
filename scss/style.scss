@@ -1,0 +1,221 @@
+@import url(../css/media.css);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+$body-bg: #1d1f29;
+$header-bg: #20222f;
+$white-color: #ffffff;
+$info-color: #8c98c6;
+$card-color: #252b42;
+$card-color-hover: #333a55;
+$bold-font: 700;
+$regular-font: 400;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+body {
+    background: $body-bg;
+    color: $white-color;
+    font-family: "Inter", sans-serif;
+}
+
+header{
+    width: 100%;
+    background: $header-bg;
+    padding: 40px 0 154px 0;
+    margin-bottom: 40px;
+    section{
+        display: flex;
+        justify-content: space-between;
+        font-weight: $bold-font;
+        .header-media{
+            h2{
+                font-size: 28px;
+                margin-bottom: 3px;
+            }
+            p{
+                font-size: 14px;
+                color: $info-color;
+                letter-spacing: 1px;
+            }
+        }
+        .header-mode{
+            display: flex;
+            align-items: center;
+            span{
+                margin-right: 16px;
+                font-size: 14px;
+                color: $info-color;
+            }
+            .mode-dark{
+                width: 48px;
+                height: 24px;
+                background: linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%);
+                border-radius: 12px;
+                cursor: pointer;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 100%;
+                    background: $card-color;
+                }
+            }
+        }
+    }
+}
+
+main{
+    width: 100%;
+    transform: translateY(-140px);
+    section{
+        .main__row{
+            display: flex;
+            justify-content: space-between;
+            column-gap: 30px;
+            .main__col{
+                background: $card-color;
+                border-radius: 5px;
+                i{
+                    font-size: 20px;
+                }
+                .facebook{
+                    color: #178FF5;
+                }
+                .twitter{
+                    color: #1DA1F2;
+                }
+                .instagram{
+                    color: linear-gradient(225deg, #DF4896 0%, #EE877E 50.91%, #FDC366 100%);
+                }
+                .youtube{
+                    color: #C4032B;
+                }
+                .caret{
+                    color: #1eb589;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 6px;
+                    i{
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                    span{
+                        font-weight: 700;
+                        font-size: 14px;
+                    }
+                }
+                .up{
+                    color: #1eb589;
+                }
+                .down{
+                    color: #DC414C;
+                }
+            }
+        }
+        .main-info{
+            margin-bottom: 64px;
+            .main__col{                
+                padding: 32px 63px 24px 63px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .username{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 8px;
+                    margin-bottom: 30px;
+                    span{
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: $info-color;
+                    }
+                }
+                h3{
+                    font-weight: 700;
+                    font-size: 56px;
+                    color: $white-color;
+                    margin-bottom: 9px;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 12px;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: $info-color;
+                    margin-bottom: 31px;
+                }
+            }
+        }
+        .main-overview{
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            h4{
+                // margin-bottom: 24px;
+                font-weight: 700;
+                font-size: 24px;
+                color: $white-color;
+            }
+            .main__row_box{
+                display: flex;
+                justify-content: space-between;
+                column-gap: 30px;
+                .main__col{
+                    padding: 0px 24px;
+                    width: 255px;
+                    height: 125px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .page{
+                        p{
+                            font-weight: 700;
+                            font-size: 14px;
+                            color: #8C98C6;
+                            margin-bottom: 23px;
+                        }
+                        h5{
+                            font-weight: 700;
+                            font-size: 32px;
+                            color: #FFFFFF;
+                        }
+                    }
+                    .growth{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .caret{
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
